@@ -428,6 +428,7 @@ jobs:
   # ---------------------------------------------------------------------------
   release:
     name: Create Release
+    if: startsWith(github.ref, 'refs/tags/')
     needs:
       - build-linux-x64
       - build-linux-arm64

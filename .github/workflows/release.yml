@@ -722,7 +722,7 @@ jobs:
             --prefix=$PREFIX --libdir=lib \
             CC=$CC AR=$AR RANLIB=$RANLIB \
             -O2
-          env "PATH=$PATH" make -j$(nproc)
+          env "PATH=$PATH" make -j$(nproc) build_libs
           sudo env "PATH=$PATH" make install_sw
 
       - name: Build libssh2
